@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_index.css"/>
+    <title>My Website</title>
+    <style>
+        /* Bouncing ball styles will go here */
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Auroria Isles Logo" class="logo"/>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="title_text">
+        <h1>Welcome to my website</h1>
+        <p>Your escape to paradise awaits — where magic meets the ocean breeze.</p>
+        <div class="slideshow">
+            <img src="images/beach1.jpg" alt="Auroria Beach" class="slide"/>
+        </div>
+    </main>
+
+    <div id="bouncer"></div>
+
+    
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    #bouncer {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        background-image: url('https://codehs.com/uploads/14d68f6f5e8be942aeb1648cca663f3b');
+        background-size: cover;
+        border-radius: 50%;
+        z-index: 9999;
+        animation:
+            bounce-y 3s infinite ease-in-out alternate,
+            bounce-x 5s infinite ease-in-out alternate;
+    }
+
+    @keyframes bounce-y {
+        0%, 100% { top: 0; }
+        50% { top: calc(100vh - 50px); }
+    }
+
+    @keyframes bounce-x {
+        0%, 100% { left: 0; }
+        50% { left: calc(100vw - 50px); }
+    }
+
+    /* Ensure other content doesn't overlap with the ball */
+    header, main, footer {
+        position: relative;
+        z-index: 1;
+    }
+  
+footer {
+    background-color: lightskyblue;
+    color: white;
+    text-align: center;
+    position: fixed;
+    padding: 15px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}  
+
+</style>    
+    
+    <footer class = "footer">
+        <p>All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
